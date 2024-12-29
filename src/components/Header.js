@@ -1,12 +1,18 @@
 import { LOGO_URL } from "../utils/constants";
-import {useState} from "react"
+import {useState,useEffect} from "react"
 
 const Header = () =>{
     const [login,setLogin]=useState('Login')
-    console.log("Header Rendered");
+    useEffect(()=>{
+        console.log("Header rendered");
+        
+    },[])
+
+    // console.log("Header Rendered");
     
     const toggler =()=>{
-    setLogin(prevState => prevState=='Login'?'Logout':'Login ')
+        // login === 'Login' ? setLogin('Logout') : setLogin('Login')
+        setLogin((prev)=> prev==='Login' ? 'Logout': 'Login')
         // console.log(login);
         
     }

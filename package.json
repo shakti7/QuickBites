@@ -2,10 +2,9 @@
   "name": "namaste-react",
   "version": "1.0.0",
   "description": "This is Namaste React By Lord Shakti",
-
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html", 
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": " jest"
   },
   "keywords": [
@@ -20,7 +19,10 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.11.2"
   },
-  "browserlist":["last 3 versions"]
+  "browserlist": [
+    "last 3 versions"
+  ]
 }
