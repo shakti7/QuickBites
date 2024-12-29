@@ -7,7 +7,7 @@ import Body from "./components/Body";
 
 
 const AppLayOut = ()=> {
-    console.log(<Body />);
+    // console.log(<Body />); // Body and Headers are nothing but React Element => object
     
     return(
       <div className="app">
