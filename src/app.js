@@ -3,17 +3,19 @@ import ReactDOM from "react-dom/client";
 
 import Header from "./components/Header";
 import Body from "./components/Body";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Error from "./components/Error";
 
 const AppLayOut = ()=> {
     // console.log(<Body />); // Body and Headers are nothing but React Element => object
+    console.log("App rendered");
     
     return(
       <div className="app">
           <Header />
-          <Body />
+          <Outlet />
       </div>
     )
 }
@@ -21,16 +23,23 @@ const AppLayOut = ()=> {
 const appRouter = createBrowserRouter([
   {
     path:'/',
-    element:<AppLayOut/>
+    element:<AppLayOut/>, 
+    children:[
+    {
+      path:"/",
+      element:<Body />
+    },
+    {
+      path:"/about",
+      element:<About />
+    },
+    {
+      path:"/contact",
+      element:<Contact />
+    }],
+    errorElement:<Error />
   },
-  {
-    path:"/about",
-    element:<About />
-  },
-  {
-    path:"/contact",
-    element:<Contact />
-  }
+  
 ])
 
 

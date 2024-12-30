@@ -19,6 +19,8 @@ const Body =()=>{
 
 
         const jsonData= await data.json()
+        console.log("Response: ",jsonData);
+        
 
         setListOfRestaurants(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setFilteredRestaurants(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
