@@ -23,8 +23,8 @@ const Body =()=>{
         console.log("Response: ",jsonData);
         
 
-        setListOfRestaurants(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setFilteredRestaurants(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setListOfRestaurants(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setFilteredRestaurants(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         
         // console.log(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
         
@@ -38,7 +38,7 @@ const Body =()=>{
 
     
 
-    return listOfRestaurants.length === 0 ? <Shimmer /> : (
+    return listOfRestaurants.length === 0 ?( <Shimmer /> ): (
     <div className="body">
         <div className="filter">
             <input 
