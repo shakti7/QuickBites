@@ -79,7 +79,7 @@ const Body =()=>{
                 // console.log("listOfRestaurants: ",listOfRestaurants)
                 
                 filteredRestaurants.map((restaurant)=>( 
-                    <Link to={`/restaurant/${restaurant?.info?.id}`} key={restaurant?.info?.id}>
+                    <Link to={`/restaurant/${restaurant?.info?.id}`} key={restaurant?.info?.id} style={{textDecoration: 'none',color:'inherit'}}>
                         <RestaurantCard  resData={restaurant}/>
                     </Link>
                 ))

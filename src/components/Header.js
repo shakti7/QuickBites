@@ -29,9 +29,9 @@ const Header = () =>{
             <div className="nav-items">
 
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About Us</Link></li>
-                    <li><Link to="/contact">Contact Us</Link></li>
+                    <li><Link to="/" style={{textDecoration:'none', color:'inherit'}}>Home</Link></li>
+                    <li><Link to="/about" style={{textDecoration:'none',color:'inherit'}}>About Us</Link></li>
+                    <li><Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></li>
                     <li>Cart</li>
                     <button className="login" onClick={toggler}>{login}</button>
                 </ul>
