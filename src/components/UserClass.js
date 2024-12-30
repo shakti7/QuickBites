@@ -10,6 +10,8 @@ class UserClass extends React.Component{
             count: 0,
             count2:2
         }
+        console.log("Constructor");
+        
     }
 
     incCount = () =>{
@@ -18,7 +20,14 @@ class UserClass extends React.Component{
         }))
     }
 
+    componentDidMount(){
+        console.log("component did mount called");
+        
+    }
+
     render(){
+        console.log("Component Render");
+        
         const {name, location}= this.props
         return(
         <div className="user-card">
