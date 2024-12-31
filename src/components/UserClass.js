@@ -6,11 +6,14 @@ class UserClass extends React.Component{
         super(props)
         // console.log(props);
         
+        // console.log(this.props.name," Constructor");
         this.state={
-            count: 0,
-            count2:2
+            userInfo:{
+                name:"Dummy",
+                location:"Default",
+                // avatar_url:"https://foundations.projectpythia.org/_images/GitHub-logo.png"
+            }
         }
-        console.log("Constructor");
         
     }
 
@@ -20,20 +23,37 @@ class UserClass extends React.Component{
         }))
     }
 
-    componentDidMount(){
-        console.log("component did mount called");
+    async componentDidMount(){
+        // console.log(this.props.name," component did mount called");
+        const data = await fetch("https://api.github.com/users/shakti7")
+        const jsonData = await data.json()
+        console.log(jsonData);
+        
+        this.setState({
+            userInfo:jsonData
+        })
+    }
+
+    componentDidUpdate(){
+        console.log("Component Did Update called");
         
     }
 
-    render(){
-        console.log("Component Render");
+    componentWillUnmount(){
+        console.log("Called just before unmount");
         
-        const {name, location}= this.props
+    }
+
+
+    render(){
+        console.log(this.props.name,"Component Render");
+        
+        // const {name, location}= this.props
+        const {name,location,avatar_url}= this.state.userInfo
+        // debugger;
         return(
         <div className="user-card">
-            <h2>Count: {this.state.count}</h2>
-            <button onClick={this.incCount}>Button</button>
-            <h2>Count2: {this.state.count2}</h2>
+            <img src={avatar_url} />
             <h2>Name: {name}</h2>
             <h3>Location: {location}</h3>
             <h4>Contact: @shakti7</h4>

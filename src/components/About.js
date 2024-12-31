@@ -23,6 +23,8 @@ class About extends React.Component{
                 <h2>This is about us</h2>
                 <User name={"Shaktu"}/>
                 <UserClass name={"Shakti Class"} location={"Cuttack Class"}/>
+                {/* <UserClass name={"Elon Musk"} location={"US"}/>
+                <UserClass name={"Elon Musk-1"} location={"US1"}/> */}
                 {/* {console.log("Parent Render-2")} */}
             </div>
         )
