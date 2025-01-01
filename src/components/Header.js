@@ -34,6 +34,7 @@ const Header = () =>{
                     <li><Link to="/" style={{textDecoration:'none', color:'inherit'}}>Home</Link></li>
                     <li><Link to="/about" style={{textDecoration:'none',color:'inherit'}}>About Us</Link></li>
                     <li><Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></li>
+                    <li><Link to="/grocery" style={{textDecoration:'none', color:'inherit'}}>Grocery</Link></li>
                     <li>Cart</li>
                     <button className="login" onClick={toggler}>{login}</button>
                 </ul>
