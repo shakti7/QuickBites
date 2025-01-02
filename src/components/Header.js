@@ -19,23 +19,23 @@ const Header = () =>{
         
     }
     return (
-        <div className = "header">
+        <div className = "flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-50 lg:bg-green-50">
             <div className="logo-container">
 
                 <img 
-                    className="logo"
+                    className="w-56"
                     src={LOGO_URL} alt="food logo" 
                 />
             </div>
-            <div className="nav-items">
+            <div className="flex items-center">
 
-                <ul>
-                    <li>Online Status:{(useOnlineStatus()==true) ? "🟢":"🔴"}</li>
-                    <li><Link to="/" style={{textDecoration:'none', color:'inherit'}}>Home</Link></li>
-                    <li><Link to="/about" style={{textDecoration:'none',color:'inherit'}}>About Us</Link></li>
-                    <li><Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></li>
-                    <li><Link to="/grocery" style={{textDecoration:'none', color:'inherit'}}>Grocery</Link></li>
-                    <li>Cart</li>
+                <ul className="flex p-4 m-4">
+                    <li className="px-4">Online Status:{(useOnlineStatus()==true) ? "🟢":"🔴"}</li>
+                    <li className="px-4"><Link to="/" style={{textDecoration:'none', color:'inherit'}}>Home</Link></li>
+                    <li className="px-4"><Link to="/about" style={{textDecoration:'none',color:'inherit'}}>About Us</Link></li>
+                    <li className="px-4"><Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></li>
+                    <li className="px-4"><Link to="/grocery" style={{textDecoration:'none', color:'inherit'}}>Grocery</Link></li>
+                    <li className="px-4">Cart</li>
                     <button className="login" onClick={toggler}>{login}</button>
                 </ul>
             </div>
