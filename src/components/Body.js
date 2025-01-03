@@ -99,7 +99,7 @@ const Body =()=>{
                     return( 
                     <Link to={`/restaurant/${restaurant?.info?.id}`} key={restaurant?.info?.id} style={{textDecoration: 'none',color:'inherit'}}>
                         {
-                            restaurant.info.avgRating >=4.5 ? <RestaurantPromoted resData={restaurant} /> : <RestaurantCard  resData={restaurant}/>
+                            restaurant.info.avgRating >=4.4 ? <RestaurantPromoted resData={restaurant} /> : <RestaurantCard  resData={restaurant}/>
                         }
                     </Link>
                 )})
