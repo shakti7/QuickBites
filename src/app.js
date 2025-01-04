@@ -1,4 +1,4 @@
-import React,{lazy, Suspense} from "react"
+import React,{lazy, Suspense,useState, useEffect,useContext} from "react"
 import ReactDOM from "react-dom/client";
 
 import Header from "./components/Header";
@@ -10,19 +10,35 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 // import Grocery from "./components/Grocery";
+import UserContext from "./utils/UserContext";
 
 const Grocery = lazy(()=> import('./components/Grocery'))
 const About =lazy(()=> import('./components/About'))
 
 const AppLayOut = ()=> {
     // console.log(<Body />); // Body and Headers are nothing but React Element => object
+    const {loggedInUser} = useContext(UserContext)
+    const [userName, setUserName] = useState(loggedInUser)
+
     console.log("App rendered");
+
+    //Authentication Logic
+    useEffect(()=>{
+      // Make an API call and send username and Password
+      const data = {
+        name: "Shakti"
+      }
+      setUserName(data.name)
+    },[])
     
     return(
-      <div className="app">
-          <Header />
-          <Outlet />
-      </div>
+      <UserContext.Provider value={{loggedInUser:userName , setUserName}}>
+
+        <div className="app">
+            <Header />
+            <Outlet />
+        </div>
+      </UserContext.Provider>
     )
 }
 

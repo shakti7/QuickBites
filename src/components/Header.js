@@ -1,7 +1,8 @@
 import { LOGO_URL } from "../utils/constants";
-import {useState,useEffect} from "react"
+import {useState,useEffect, useContext} from "react"
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () =>{
     const [login,setLogin]=useState('Login')
@@ -11,6 +12,8 @@ const Header = () =>{
     // },[])
 
     console.log("Header Rendered");
+    const {loggedInUser} = useContext(UserContext)
+    
     
     const toggler =()=>{
         // login === 'Login' ? setLogin('Logout') : setLogin('Login')
@@ -37,6 +40,7 @@ const Header = () =>{
                     <li className="px-4"><Link to="/grocery" style={{textDecoration:'none', color:'inherit'}}>Grocery</Link></li>
                     <li className="px-4">Cart</li>
                     <button className="login" onClick={toggler}>{login}</button>
+                    <li className="px-4 font-bold">{loggedInUser}</li>
                 </ul>
             </div>
         </div>
