@@ -28,7 +28,7 @@ const RestaurantMenu =()=>{
     });
     
 
-    // console.log("categories: ",categories);
+    console.log("categories: ",categories);
     
 
     return (
@@ -36,7 +36,7 @@ const RestaurantMenu =()=>{
             <h1 className="font-bold my-5 text-xl">{name}</h1>
             <p className="font-bold text-lg">{cuisines.join(", ")}- {costForTwoMessage}</p>
 
-            {categories.map((category)=><RestaurantCategory data={category?.card?.card}/>)  }   
+            {categories.map((category)=><RestaurantCategory data={category?.card?.card} key={category?.card?.card?.title}/>)  }   
         </div>
     )
 }

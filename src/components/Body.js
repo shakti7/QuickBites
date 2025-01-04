@@ -21,7 +21,7 @@ const Body =()=>{
     },[])
 
     const fetchData =async()=>{
-        const data = await fetch("http://localhost:4000/api/swiggy-restaurants")
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.462521&lng=85.8829895&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
 
 
         const jsonData= await data.json()
@@ -49,7 +49,7 @@ const Body =()=>{
     return listOfRestaurants.length === 0 ?( <Shimmer /> ): (
     <div className="body">
         <div className="flex">
-            <div className="search m-4 p-4">
+            <div className="m-4 p-4">
             <input 
                 type="text" 
                 className="border border-solid border-black" 
