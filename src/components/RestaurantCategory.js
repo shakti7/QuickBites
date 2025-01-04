@@ -1,13 +1,15 @@
 import ItemList from "./ItemList"
 import {useState} from "react"
 
-const RestaurantCategory = ({data}) =>{
+const RestaurantCategory = ({data, expand,setExpandIndex}) =>{
 
-    const [expand, setExpand]=useState(false);
+    // lifting states up
+    // const [expand, setExpand]=useState(false);
     // console.log("data: ",data);
     const handleClick=()=>{
-        setExpand((prev)=> !prev)
+        console.log("Clicked");
         
+        setExpandIndex()
     }
     return (
         <div>
