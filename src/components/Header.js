@@ -3,6 +3,7 @@ import {useState,useEffect, useContext} from "react"
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () =>{
     const [login,setLogin]=useState('Login')
@@ -13,6 +14,10 @@ const Header = () =>{
 
     console.log("Header Rendered");
     const {loggedInUser} = useContext(UserContext)
+
+    const cartItems = useSelector((store)=> store.cart.items)
+    console.log(cartItems);
+    
     
     
     const toggler =()=>{
@@ -38,7 +43,7 @@ const Header = () =>{
                     <li className="px-4"><Link to="/about" style={{textDecoration:'none',color:'inherit'}}>About Us</Link></li>
                     <li className="px-4"><Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></li>
                     <li className="px-4"><Link to="/grocery" style={{textDecoration:'none', color:'inherit'}}>Grocery</Link></li>
-                    <li className="px-4">Cart</li>
+                    <li className="px-4 font-bold text-xl">Cart - ({cartItems.length } items)</li>
                     <button className="login" onClick={toggler}>{login}</button>
                     <li className="px-4 font-bold">{loggedInUser}</li>
                 </ul>
