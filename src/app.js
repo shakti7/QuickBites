@@ -13,6 +13,7 @@ import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 const Grocery = lazy(()=> import('./components/Grocery'))
 const About =lazy(()=> import('./components/About'))
@@ -70,6 +71,10 @@ const appRouter = createBrowserRouter([
     {
       path:"/grocery",
       element:<Suspense fallback={<h1>Loading...</h1>}><Grocery /></Suspense>
+    },
+    {
+      path:"/cart",
+      element:<Cart />
     }],
     errorElement:<Error />
   },

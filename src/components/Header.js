@@ -43,7 +43,7 @@ const Header = () =>{
                     <li className="px-4"><Link to="/about" style={{textDecoration:'none',color:'inherit'}}>About Us</Link></li>
                     <li className="px-4"><Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></li>
                     <li className="px-4"><Link to="/grocery" style={{textDecoration:'none', color:'inherit'}}>Grocery</Link></li>
-                    <li className="px-4 font-bold text-xl">Cart - ({cartItems.length } items)</li>
+                    <li className="px-4 font-bold text-xl"><Link to="/cart">Cart - ({cartItems.length } items)</Link></li>
                     <button className="login" onClick={toggler}>{login}</button>
                     <li className="px-4 font-bold">{loggedInUser}</li>
                 </ul>
