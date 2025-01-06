@@ -1,0 +1,92 @@
+{
+    "info": {
+        "id": "651010",
+        "name": "Pizza Hut",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/17/f753c5c4-7823-43c9-88d0-5d01f8098b73_651010.jpg",
+        "locality": "Mission Road",
+        "areaName": "Baxi Bazar",
+        "costForTwo": "₹350 for two",
+        "cuisines": [
+            "Pizzas"
+        ],
+        "avgRating": 4.3,
+        "parentId": "721",
+        "avgRatingString": "4.3",
+        "totalRatingsString": "2.6K+",
+        "sla": {
+            "deliveryTime": 29,
+            "lastMileTravel": 2.8,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-30 mins",
+            "lastMileTravelString": "2.8 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2025-01-07 01:00:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "Rxawards/_CATEGORY-Pizza.png",
+                    "description": "Delivery!"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "Delivery!",
+                                "imageId": "Rxawards/_CATEGORY-Pizza.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "₹300 OFF",
+            "subHeader": "ABOVE ₹1699",
+            "discountTag": "FLAT DEAL"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-dc531ee3-c339-4ce4-9075-09d6d7af4dbc"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/cuttack/pizza-hut-mission-road-baxi-bazar-rest651010",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}
